@@ -23,6 +23,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app->singleton(
+            \App\Repositories\Contracts\TaskRepositoryInterface::class,
+            \App\Repositories\Eloquent\TaskEloquentRepository::class
+        );
+        $this->app->singleton(
+            \App\Services\TaskServiceInterface::class,
+            \App\Services\Impl\TaskService::class
+        );
     }
 }
