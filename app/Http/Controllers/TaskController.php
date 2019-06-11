@@ -32,4 +32,9 @@ class TaskController extends Controller
         $this->taskService->delete($task);
         return response()->json(['message' => 'Oke']);
     }
+
+    public function create(Request $request) {
+        $this->taskService->create($request);
+        return response()->json(['message' => 'Oke']);
+    }
 }
