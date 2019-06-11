@@ -40,13 +40,19 @@ abstract class EloquentRepository implements RepositoryInterface
         // TODO: Implement create() method.
     }
 
-    public function delete($id)
+    public function delete($task)
     {
-        // TODO: Implement delete() method.
+        $task->delete();
     }
 
     public function update($object)
     {
         // TODO: Implement update() method.
+    }
+
+    public function getById($id)
+    {
+        $result = $this->model->findOrFail($id);
+        return $result;
     }
 }

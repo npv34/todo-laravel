@@ -12,5 +12,7 @@ interface RepositoryInterface
 
     public function update($object);
 
-    public function delete($id);
+    public function delete($obj);
+
+    public function getById($id);
 }
