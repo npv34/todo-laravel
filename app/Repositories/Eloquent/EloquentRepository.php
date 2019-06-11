@@ -37,7 +37,7 @@ abstract class EloquentRepository implements RepositoryInterface
 
     public function create($object)
     {
-        // TODO: Implement create() method.
+        return $object->save();
     }
 
     public function delete($task)
